@@ -1,0 +1,796 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    /* border:1px solid green; */
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  display: grid;
+  place-items: center;
+
+}
+
+@font-face {
+    font-family:Code-New-Roman ;
+    src: url(../fonts/lemon_milk/LEMONMILK-Light.otf);
+}
+
+@font-face {
+    font-family:Hundini;
+    src: url(../fonts/hun_din_1451/HunDIN1451.ttf);
+}
+
+@font-face {
+    font-family:Antapani;
+    src: url(../fonts/antapani/Antapani-ExtraBold.otf);
+}
+
+@font-face {
+    font-family:Helmet-Regular;
+    src: url(../fonts/helmet_2/Helmet-Regular.ttf);
+}
+
+@font-face {
+    font-family:Blue-Highway d;
+    src: url(../fonts/blue_highway/blue\ highway\ d.otf);
+}
+
+@font-face {
+    font-family:Blue-Highway bd;
+    src: url(../fonts/blue_highway/blue\ highway\ bd.otf);
+}
+
+@font-face {
+    font-family:Blue-Highway rg;
+    src: url(../fonts/blue_highway/blue\ highway\ rg.otf);
+}
+
+@font-face{
+    font-family:Euclid Circular A;
+    src: url(../fonts/euclid-circular-a-cufonfonts/Euclid\ Circular\ A\ Bold.ttf);
+
+}
+
+@font-face {
+    font-family:CreatoDisplay-ExtraBold;
+    src: url(../fonts/creato_display/CreatoDisplay-ExtraBold.otf);
+}
+
+@font-face {
+    font-family:CreatoDisplay-Medium;
+    src: url(../fonts/creato_display/CreatoDisplay-Medium.otf);
+}
+
+@font-face {
+    font-family:CreatoDisplay-Light;
+    src: url(../fonts/creato_display/CreatoDisplay-Light.otf);
+}
+
+@font-face{
+    font-family:Typo-Formal-Light-Demo;
+    src: url(../fonts/typo_formal/Typo\ Formal\ Light\ Demo.otf);
+}
+
+@font-face{
+    font-family:Typo-Formal-Regular-Demo;
+    src: url(../fonts/typo_formal/Typo\ Formal\ Regular\ Demo.otf);
+}
+
+@font-face {
+    font-family:Ebrima;
+    src: url(../fonts/Ebrima\ Font/ebrima.tff);
+}
+
+@font-face {
+    font-family:Ebrima-bold;
+    src: url(../fonts/Ebrima\ Font/Ebrima-bold.tff);
+}
+
+@font-face {
+    font-family:Gontserrat-Medium;
+    src: url(../fonts/gontserrat/Gontserrat-Medium.ttf);
+}
+
+@font-face{
+    font-family:Gontserrat-Regular;
+    src: url(../fonts/gontserrat/Gontserrat-Regular.ttf);
+}
+
+@font-face {
+    font-family:Gontserrat-Light;
+    src: url(../fonts/gontserrat/Gontserrat-Light.ttf);
+}
+
+/* <-------------------- GRID -------------------------->  */
+
+.contenedor{
+    display: grid;
+    grid-template-columns: repeat(13, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    height:100vh;  
+    background: #dadadb;
+}
+
+
+aside {
+    grid-area: 1 / 1 / 10 / 3;
+    background-color: #bd2c2c;
+    z-index:5;
+    box-shadow:5px 0px 30px 0.6px #f26262;
+    border-radius:0 20px 20px 0;
+}
+
+header{
+    grid-area: 1 / 3 / 2 / 14;
+    /* background-color: #38383f; */
+    background-color:#e8e8e9;
+    box-shadow:0 8px 28px 0 rgb(187, 188, 171);
+    z-index:2;
+}
+
+main{
+    grid-area: 2 / 3 / 10 / 14;
+    /* background-color: #303037 ; */
+    background-color:#dadadb;
+}
+
+/* <-------------------- ASIDE - LOGO -------------------------->  */
+
+.aside-logo{
+    width:50%;
+    height:auto;
+    background-color:transparent;
+    margin:10px auto;
+    border-radius:10;
+    overflow:hidden;
+}
+
+img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%; 
+}
+
+/* <-------------------- ASIDE - TITLE -------------------------->  */
+
+.line{
+    border:1px solid rgba(255, 255, 255, 0.136);
+    width:60%;
+    height:1px;
+    margin:auto;  
+}
+
+.dashboard{
+    color:white;
+    text-shadow: -0.3px -0.3px 1em #d4a3a3;
+    /* font-family:Typo-Formal-Regular-Demo; */
+    /* font-family:Hundini; */
+    font-family:Code-New-Roman ;
+    font-size:20px;
+    width:100%;
+    display:flex;
+}
+
+.dashboard a{
+    margin:10px auto 10px auto;
+}
+
+.dashboard a i{
+    color:#ffffff6e;
+    display:none;
+}
+
+/* <-------------------- ASIDE - INTERFACE -------------------------->  */
+
+.aside-interface{
+    color:rgb(209, 200, 200);
+    /* font-family:Typo-Formal-Regular-Demo; */
+    /* font-family:Gontserrat-Medium; */
+    /* font-family:Hundini; */
+    font-family:Code-New-Roman ;
+    width:80%;
+    display:flex;
+    margin:10px auto;
+    font-size:15px;
+}
+
+ul{
+    padding-left:0;
+    list-style:none;
+}
+
+.aside-componentes{
+  
+    width:80%;
+    display:flex;
+    margin:auto;
+}
+
+.aside-componentes > *{
+    color:white;
+    list-style:none;
+    font-size:17px;
+}
+
+.aside-componentes ul li{
+    display:inline;
+    width:80%;
+}
+
+
+ul li a{
+    color:white;
+    /* font-family:Typo-Formal-Regular-Demo; */
+    /* font-family:Gontserrat-Regular; */
+    /* font-family:Hundini; */
+    font-family:Code-New-Roman ;
+    font-size:15px;
+    text-decoration:none;
+    text-shadow: 0 0 0.3em rgba(255, 255, 255, 0.43);
+}
+
+ul li a:hover{
+   font-weight:bold;
+}
+
+ul li a i{
+    margin-right:10px;
+    color:#ffffff6e;
+}
+
+
+.dashboard a{
+    color:white;
+    text-decoration:none;
+    
+}
+
+.line-two{
+    border:1px solid rgba(255, 255, 255, 0.096);
+    width:60%;
+    height:1px;
+    margin:10px auto auto auto;
+}
+
+
+
+/* <-------------------- HEADER -------------------------->  */
+
+header{
+    display:grid;
+    grid-template-columns: repeat(15, 1fr);
+}
+
+.header-login img{
+    border-radius:10px;
+    background:transparent;
+    width:60%;
+    height:60%;
+    margin:auto;
+    display:flex;
+}
+
+.header-title{
+    font-family:Gontserrat-Light;
+    width:100%;
+    height:auto;
+    grid-area: 1 / 13 / 2 / 16;
+    margin: auto;
+    color:#a1a1a1;
+    text-align: right;
+}
+
+.header-line{
+    grid-area: 1 / 9 / 2 / 13;
+    width:1%;
+    height:60%;
+    border:1px solid #b3b3b3;
+    margin:auto 0px auto auto;
+    display:flex;
+}
+
+/* ------------- (HEADER) BOTON SUBMENU  ----------------- */
+
+  .botondd {
+    margin: 0;
+    display: grid;
+    place-items: center;
+    height:100%;
+  }
+  
+  .split-button {
+    position: relative;
+    width:100%;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    border-radius: 8px;
+  }
+  
+  button {
+    display: flex;
+    align-items:center;
+    height: 100%;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    color: #f9f9f9;
+    font-size: 16px;
+    font-family: "Euclid Circular A";
+    height:50px;
+  }
+  
+  .split-button > button:nth-child(1) {
+    padding: 0 24px;
+  }
+  
+  .split-button > button:nth-child(2) {
+    position: absolute;
+    right:10px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+   
+  }
+  
+  .menudd {
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 140%;
+    z-index: 1;
+    width: 95%;
+    translate: -30px 0;
+    opacity: 0;
+    visibility: hidden;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.45);
+    transition: 0.4s;
+  }
+  
+  .menudd.open {
+    translate: 0 0;
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .menudd > button {
+    gap: 10px;
+    border: 0;
+    border-radius: 0;
+    width: 100%;
+    height: 56px;
+    padding: 0px 18px;
+
+  }
+  
+  .menudd > button:hover {
+    background: rgba(0, 0, 0, 0.26);
+  }
+  
+  .chevron {
+    margin: auto;
+  }
+
+  #chevron{
+    width:100%;
+    height:100%;
+  }
+
+  @media (min-height: 700px){
+    .menudd{
+        top:170%;
+    }
+  }
+  
+
+/* <-------------------- MAIN -------------------------->  */
+
+.main-title{
+    width:90%;
+    height:50px;
+    
+    margin:10px;
+    font-size:40px;
+    color:white;
+    font-family:Euclid Circular A;
+  
+}
+
+
+/* <-------------------- FORM -------------------------->  */
+
+.form-boton-delete{
+    background-color:white;
+    text-decoration:none;
+    color:black;
+}
+
+.form-propuestas > *{
+    color:black;
+}
+
+/* <-------------------- TABLE (MAIN)-------------------------->  */
+
+.table-propuestas{
+    border-collapse:collapse;
+    border:1px solid white;
+    table-layout:fixed;
+    font-size:14px;  
+ 
+}
+
+
+th{
+    padding: 10px 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border:1px solid white;
+}
+
+td{
+    padding:15px;
+    border-bottom: solid 1px;
+    /* font-family:CreatoDisplay-Light; */
+    /* font-family:Ebrima; */
+    /* font-family:Gontserrat-Light; */
+    /* font-family:Blue-Highway rg; */
+    /* font-family:Helmet-Regular; */
+    font-family:Antapani;
+    font-size:16px;
+
+}
+
+tr{
+    border:1px solid white;
+}
+
+.table-contenido{
+    width:90%;
+    display:flex;
+    margin:auto;
+    /* background-color:blue; */
+}
+
+table{
+    width:100%;
+    background-color:#ffffff;
+    color:#808080;
+}
+
+.table-icons-enlace a{
+    text-decoration:none;
+    color:#808080;
+    margin-right:10px;
+}
+
+.table-icons-enlace a:hover{
+    cursor:pointer;
+    color:#4f4c4c;
+    text-shadow: 0 0 1em #b5b5b5;
+}
+
+.table-template, th, td{
+    border-left:8px solid #d8d8d9;
+    border-right:8px solid #d8d8d9;
+    border-top:none;
+    border-bottom:none;
+    border-collapse:collapse;
+    text-align:center; 
+  
+}
+
+.table-template-sustentaciones{
+    border-left:8px solid #d8d8d9;
+    border-right:8px solid #d8d8d9;
+    border-top:none;
+    border-bottom:none;
+    border-collapse:collapse;
+    text-align:center; 
+}
+
+.table-template-sustentaciones{
+    margin-top:45px;
+}
+
+.title-table-first{
+    border-radius:10px;
+}
+
+.tam-icon{
+    width:40px;
+    height:auto;
+}
+
+.boton-crear-alumno{
+    width:89%;
+    display:flex;
+    margin:auto;
+    padding:20px 0 20px 0;
+}
+
+.btn-create-alumno{
+    color:white;
+    background-color: #b62929;
+    padding:10px 20px;
+    border-radius:10px;
+    border:none;
+    font-family:Euclid Circular A;
+}
+
+
+.btn-create-alumno:hover{
+    background-color:black;
+    cursor:pointer;
+}
+
+.header-table{
+    background-color: #b62929;
+    color:white;
+    font-size:20px;
+    border-bottom:8px solid #d8d8d9;
+    border-radius:10px;
+    /* font-family:CreatoDisplay-ExtraBold;  */
+    /* font-family:Typo-Formal-Regular-Demo; */
+    /* font-family:Ebrima;
+    font-weight:bold; */
+    /* font-family:Gontserrat-Medium; */
+    /* font-family:Blue-Highway d; */
+    /* font-family:Helmet-Regular; */
+    font-family:Antapani;
+    
+}
+
+.header-table-row{
+    /* font-family:CreatoDisplay-Medium;  */
+    /* font-family:Typo-Formal-Regular-Demo; */
+    /* font-family:Ebrima;
+    font-weight:bold; */
+    /* font-family:Gontserrat-Regular; */
+    /* font-family:Blue-Highway bd; */
+    /* font-family:Helmet-Regular; */
+    font-family:Antapani;
+}
+
+tr:nth-child(even){
+    background-color:#f2f3f3;
+}
+
+/* -------------------Ventana Emergente  --------------------- */
+
+#modal{
+    padding:0;
+    height:55%;
+    width:400px;
+    margin:auto;
+    border:none;
+    box-shadow:5px 5px 5px rgba(0, 0, 0, 0.082);
+    border-radius:10px;
+    background-color:#ffffff;
+    /* border:2px solid rgb(55, 54, 54); */
+}
+
+.modal-estilo{
+    height:65%;
+    width:100%;
+    margin:auto;
+    border:none;
+    box-shadow:5px 5px 5px rgba(194, 191, 191, 0.082);
+    
+    border-radius:10px;
+}
+
+dialog h2{
+    font-family:CreatoDisplay-ExtraBold; 
+    height:50px;
+    width:80%;
+    font-size:20px;
+    color:white;
+    position: relative;
+    display:inline-block;
+    position: absolute;
+    text-align:center;
+
+}
+
+.contenido-modal{
+    
+    width:100%;
+    height:100%;
+    margin:0;
+    box-sizing:border-box;
+}
+
+.title-modal{
+
+    width:100%;
+    border-top-left-radius:10px;
+    border-top-right-radius:10px;
+    height:70px;
+}
+
+.formulario{
+    padding: 1rem;
+    margin: 2rem;
+    text-align: center;
+    border:1px solid salmon;
+}
+
+.formulario input {
+    width: 70%;
+    display: block;
+    margin: auto;
+    margin-bottom: 2rem;
+    background-color: transparent;
+    border: none;
+    border-bottom: white thin solid;
+    text-align: center;
+    outline: none;
+    padding: .2rem 0;
+    font-size: .9rem;
+    color: black;
+    border:1px solid green;
+}
+
+.formulario input[type="submit"] {
+    width: 60%;
+    margin: auto;
+    border: solid thin white;
+    padding: .7rem;
+    border-radius: 10px;
+    margin-top: 6rem;
+    font-size: .8rem;
+    cursor: pointer;
+    color:white;
+    background:#c10001;
+    padding:10px 20px;
+    border-radius:10px;
+    border:none;
+    font-family:Euclid Circular A;
+}
+
+#btn-cerrar-modal{
+    
+    background-size: cover;
+    border:none;
+    display:inline;
+    
+    margin-top:auto;
+    
+}
+
+.fa-xmark{
+    font-size:20px;
+    display:inline;
+    float:right;
+    color:gray;
+    
+}
+
+/* ------------------- Ventana Emergente Editar  --------------------- */
+
+dialog:modal{
+    width:400px;
+    height:500px;
+ 
+}
+
+/* ------------------- Tabla propuestas / proyectos (MAIN)  --------------------- */
+
+.ver-estudiante{
+
+    cursor:pointer;
+    text-decoration:none;
+    color:#808080;
+}
+
+.ver-estudiante:hover{
+   
+    color:#4f4c4c;
+    text-shadow: 0 0 1em #b5b5b5;
+}
+
+.ver-propuesta{
+    cursor:pointer;
+    text-decoration:none;
+    color:#808080;
+}
+
+.ver-propuesta:hover{
+   
+    color:#4f4c4c;
+    text-shadow: 0 0 1em #b5b5b5;
+}
+
+.ver-director .fa-chalkboard-user:hover{
+    cursor:pointer;
+    color:#4f4c4c;
+    text-shadow: 0 0 1em #b5b5b5;
+}
+
+.Asignar-director, .form-boton-delete{
+    cursor:pointer;
+    text-decoration:none;
+    color:#808080;
+    margin:0 5px;
+    background:transparent;
+}
+
+.form-boton-delete, .Designar-estudiante{
+    color:rgb(206, 78, 78);
+}
+
+.Asignar-director, .Asignar-estudiante{
+    color: #6293ed;
+}
+
+.Asignar-director:hover, .form-boton-delete:hover{
+    color:#4f4c4c;
+    text-shadow: 0 0 1em #b5b5b5;
+    
+}
+
+
+.Asignar-estudiante:hover, .Designar-estudiante:hover{
+    color:#4f4c4c;
+    text-shadow: 0 0 1em #b5b5b5;
+}
+
+.Asignar-estudiante, .Designar-estudiante{
+    background:transparent;
+    margin:0 5px;
+    cursor:pointer;
+}
+
+.form-boton-edit, .form-boton-up{
+    color: #6293ed;
+    margin: 0 5px;
+}
+
+.form-boton-edit:hover, .form-boton-up:hover{
+    color:#4f4c4c;
+    margin: 0 5px;
+}
+
+.form-boton-delete-act{
+    text-decoration:none;
+    color:#808080;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.form-boton-delete-act:hover{
+    color:#4f4c4c;
+    text-shadow: 0 0 1em #b5b5b5;
+}
+
+.ver-fecha_pre:hover{
+    cursor:pointer;
+    color:#4f4c4c;
+    text-shadow: 0 0 1em #b5b5b5;
+}
+
+.ver-recinto:hover{
+    cursor:pointer;
+    color:#4f4c4c;
+    text-shadow: 0 0 1em #b5b5b5;
+}
+
+.ver-jurado:hover{
+    cursor:pointer;
+    color:#4f4c4c;
+    text-shadow: 0 0 1em #b5b5b5;
+}
+
+.ver-veredicto:hover{
+    cursor:pointer;
+    color:#4f4c4c;
+    text-shadow: 0 0 1em #b5b5b5;
+}
